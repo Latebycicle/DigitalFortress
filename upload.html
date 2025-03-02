@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Fortress - Secure File Upload</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'SF Mono', monospace;
+        }
+        
+        body {
+            background-color: white;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            flex-grow: 1;
+        }
+        
+        header {
+            background-color: #F3F3F4;
+            color: rgb(0, 0, 0);
+            padding: 20px 0;
+            border-bottom: 1px solid #000000;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        .upload-container {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+        
+        h2 {
+            color: #0078d4;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #0078d4;
+            padding-bottom: 10px;
+        }
+        
+        .file-list {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            min-height: 100px;
+        }
+        
+        .file-item {
+            padding: 8px;
+            margin-bottom: 5px;
+            background-color: #e0e0e0;
+            border-radius: 3px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .file-item button {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 2px 8px;
+            cursor: pointer;
+        }
+        
+        .upload-btn {
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+        
+        .upload-btn:hover {
+            background-color: #005a9e;
+        }
+        
+        .clear-btn {
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+        
+        .clear-btn:hover {
+            background-color: #5a6268;
+        }
+        
+        .message {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            display: none;
+        }
+        
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+        
+        #fileInput {
+            display: none;
+        }
+        
+        .drop-zone {
+            border: 2px dashed #0078d4;
+            border-radius: 5px;
+            padding: 25px;
+            text-align: center;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .drop-zone.active {
+            background-color: rgba(0, 120, 212, 0.1);
+            border-color: #005a9e;
+        }
+        
+        .drop-zone-prompt {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        Employee Note: Remember to secure this upload portal
+        System credentials: username: admin, password: DF_s3cur1ty#9876
+    -->
+    <header>
+        <div class="logo">DIGITAL FORTRESS</div>
+        <div>Secure File Upload Portal</div>
+    </header>
+    
+    <div class="container">
+        <div class="upload-container">
+            <h2>Upload Files to Secure Vault</h2>
+            <p>Use this portal to upload files to our secure storage system. Only authorized file types are accepted.</p>
+            
+            <div class="drop-zone" id="dropZone">
+                <div class="drop-zone-prompt">Drag and drop files here</div>
+                <div>or</div>
+                <button class="upload-btn" id="addFilesBtn">Browse Files</button>
+            </div>
+            
+            <div class="file-list" id="fileList">
+                <p id="emptyMessage">No files selected.</p>
+            </div>
+            
+            <input type="file" id="fileInput" multiple>
+            
+            <div class="button-group">
+                <button class="upload-btn" id="verifyBtn">Verify & Upload</button>
+                <button class="clear-btn" id="clearBtn">Clear All</button>
+            </div>
+            
+            <div class="message success" id="successMessage">
+                <h3>Verification Successful!</h3>
+                <p>The key is hidden in the vault.</p>
+            </div>
+            
+            <div class="message error" id="errorMessage">
+                <h3>Security Verification Failed</h3>
+                <p>Try again.</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 Digital Fortress. All rights reserved.</p>
+        <p>For authorized personnel only</p>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const fileInput = document.getElementById('fileInput');
+            const addFilesBtn = document.getElementById('addFilesBtn');
+            const verifyBtn = document.getElementById('verifyBtn');
+            const clearBtn = document.getElementById('clearBtn');
+            const fileList = document.getElementById('fileList');
+            const emptyMessage = document.getElementById('emptyMessage');
+            const successMessage = document.getElementById('successMessage');
+            const errorMessage = document.getElementById('errorMessage');
+            const dropZone = document.getElementById('dropZone');
+            
+            // Store selected files
+            let selectedFiles = [];
+            
+            // Add files button click
+            addFilesBtn.addEventListener('click', function() {
+                fileInput.click();
+            });
+            
+            // Clear button click
+            clearBtn.addEventListener('click', function() {
+                selectedFiles = [];
+                updateFileList();
+                successMessage.style.display = 'none';
+                errorMessage.style.display = 'none';
+            });
+            
+            // File input change
+            fileInput.addEventListener('change', function(e) {
+                const files = e.target.files;
+                addFiles(files);
+                // Reset file input
+                fileInput.value = '';
+            });
+            
+            // Drag and drop functionality
+            ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                dropZone.addEventListener(eventName, preventDefaults, false);
+            });
+            
+            function preventDefaults(e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            
+            ['dragenter', 'dragover'].forEach(eventName => {
+                dropZone.addEventListener(eventName, highlight, false);
+            });
+            
+            ['dragleave', 'drop'].forEach(eventName => {
+                dropZone.addEventListener(eventName, unhighlight, false);
+            });
+            
+            function highlight() {
+                dropZone.classList.add('active');
+            }
+            
+            function unhighlight() {
+                dropZone.classList.remove('active');
+            }
+            
+            dropZone.addEventListener('drop', handleDrop, false);
+            
+            function handleDrop(e) {
+                const dt = e.dataTransfer;
+                const files = dt.files;
+                addFiles(files);
+            }
+            
+            // Add files to the list
+            function addFiles(files) {
+                if (files.length > 0) {
+                    for (let i = 0; i < files.length; i++) {
+                        // Add file to our array if not already added
+                        if (!selectedFiles.some(f => f.name === files[i].name)) {
+                            selectedFiles.push(files[i]);
+                        }
+                    }
+                    
+                    // Update the file list display
+                    updateFileList();
+                }
+            }
+            
+            // Update file list display
+            function updateFileList() {
+                // Clear the list
+                fileList.innerHTML = '';
+                
+                if (selectedFiles.length === 0) {
+                    fileList.appendChild(emptyMessage);
+                    return;
+                }
+                
+                // Add each file to the list
+                selectedFiles.forEach((file, index) => {
+                    const fileItem = document.createElement('div');
+                    fileItem.className = 'file-item';
+                    
+                    const fileName = document.createElement('span');
+                    fileName.textContent = file.name;
+                    
+                    const removeBtn = document.createElement('button');
+                    removeBtn.textContent = 'Remove';
+                    removeBtn.addEventListener('click', function() {
+                        selectedFiles.splice(index, 1);
+                        updateFileList();
+                    });
+                    
+                    fileItem.appendChild(fileName);
+                    fileItem.appendChild(removeBtn);
+                    fileList.appendChild(fileItem);
+                });
+            }
+            
+            // Verify button click
+            verifyBtn.addEventListener('click', function() {
+                // Hide any previous messages
+                successMessage.style.display = 'none';
+                errorMessage.style.display = 'none';
+                
+                // Check if we have the specific files we're looking for
+                const hasClickMe = selectedFiles.some(file => file.name.toLowerCase() === 'clickme.exe');
+                const hasDocument = selectedFiles.some(file => file.name.toLowerCase() === 'document.pdf.exe');
+                
+                if (selectedFiles.length === 2 && hasClickMe && hasDocument) {
+                    // Success! Show the success message
+                    successMessage.style.display = 'block';
+                } else {
+                    // Error - wrong files
+                    errorMessage.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

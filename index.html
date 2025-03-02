@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mail</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="top-ribbon">
+            <h1>Digital Fortress Mail</h1>
+        </div>
+        
+        <div class="content">
+            <div id="inbox-view" class="view active">
+                <div class="email-list">
+                    <!-- Email list will be populated here -->
+                </div>
+                <div class="email-content">
+                    <div class="email-header">
+                        <h2 id="email-subject">Select an email to view</h2>
+                        <div id="email-meta">
+                            <span id="email-from"></span>
+                            <span id="email-timestamp"></span>
+                        </div>
+                    </div>
+                    <div id="email-body">
+                        <p class="placeholder">No email selected</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 

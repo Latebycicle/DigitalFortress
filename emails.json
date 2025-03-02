@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1677687600000,
+    "from": "security@digitalfortress-verify.com",
+    "subject": "URGENT: Your Digital Fortress Account Requires Verification",
+    "timestamp": "2023-03-01T09:15:00",
+    "content": "# IMPORTANT: Account Security Alert\n\nDear Valued Customer,\n\nOur security system has detected unusual login attempts on your Digital Fortress account. To ensure your account remains secure, please verify your identity immediately by clicking the link below:\n\n[**VERIFY ACCOUNT NOW**](https://digitalfortress-security.example.com/verify)\n\n**If you do not verify within 24 hours, your account will be suspended for security purposes.**\n\nRequired information:\n- Username\n- Password\n- Security questions\n\nThank you for helping us keep your account secure.\n\nDigital Fortress Security Team\n\n---\n*This is an automated message. Please do not reply to this email.*"
+  },
+  {
+    "id": 1677773400000,
+    "from": "prince.abdullah@royalfamily.example",
+    "subject": "CONFIDENTIAL: Business Proposal (USD 8.5 Million)",
+    "timestamp": "2023-03-02T14:30:00",
+    "content": "Dear Friend,\n\nI am Prince Abdullah Nasser, son of the former prince of Nigeria. I am contacting you regarding a strictly confidential business proposal involving the transfer of USD 8.5 million.\n\nMy father left this sum in a private account before his unfortunate passing. As his only surviving heir, I need a foreign partner to help me transfer these funds out of the country due to political restrictions.\n\nI am prepared to offer you 30% of the total amount for your assistance. All I require is:\n\n1. Your full name\n2. Your bank account details\n3. A copy of your identification\n4. An initial fee of $750 for legal documentation\n\nPlease treat this matter with utmost confidentiality and contact me immediately at prince.abdullah.secure@royaltransfer.example if you are interested.\n\nYours sincerely,\nPrince Abdullah Nasser"
+  },
+  {
+    "id": 1677859800000,
+    "from": "lottery@international-winners.example",
+    "subject": "CONGRATULATIONS: You've Won £2,500,000.00!!!",
+    "timestamp": "2023-03-03T10:45:00",
+    "content": "# CONGRATULATIONS!!!\n\n**INTERNATIONAL LOTTERY COMMISSION**\n**WINNING NOTIFICATION: REF ILC/7243X-89**\n\nDear Lucky Winner,\n\nWe are pleased to inform you that your email address was randomly selected as a winner in our International Lottery draw held on February 28, 2023.\n\n**Prize Amount: £2,500,000.00 (Two Million Five Hundred Thousand Pounds)**\n\nYour email was selected from over 250,000 entries in our computerized ballot system. To claim your prize, please contact our claims agent immediately:\n\n**Mr. James Peterson**\nEmail: claims@international-winners.example\nTel: +44 7700 900123\n\nTo process your claim, please provide:\n1. Full Name\n2. Address\n3. Phone Number\n4. Copy of ID/Passport\n5. Occupation\n6. Processing fee of £99.99\n\n**IMPORTANT: Keep this notification confidential until your funds have been processed to avoid double claims and unwarranted abuse of the program.**\n\nCongratulations once again!\n\nSincerely,\nMrs. Elizabeth Williams\nInternational Lottery Commission"
+  },
+  {
+    "id": 1677946200000,
+    "from": "helpdesk@digital-fortress.example",
+    "subject": "Action Required: Your Digital Fortress Email Storage is Full",
+    "timestamp": "2023-03-04T16:10:00",
+    "content": "# ATTENTION: EMAIL STORAGE LIMIT REACHED\n\nDear Digital Fortress User,\n\nYour email account has reached 99% of its storage capacity. If no action is taken, you will no longer be able to receive new emails and important system notifications.\n\n**To increase your storage capacity:**\n\n1. Click on the link below to log in to your account\n2. Verify your account credentials\n3. Follow the storage upgrade instructions\n\n[**UPGRADE STORAGE NOW**](https://mail-storage.digital-fortress.example)\n\nAlternatively, you can free up space by deleting old emails and emptying your trash folder.\n\n**Note:** Failure to take action within 48 hours may result in temporary account suspension.\n\nThank you for your prompt attention to this matter.\n\nDigital Fortress IT Support Team\n\n---\n\n*This is an automated message from the system administrator. Please do not reply.*"
+  },
+  {
+    "id": 1678032600000,
+    "from": "invoice@digital-fortress-billing.example",
+    "subject": "Your Digital Fortress Invoice #DF-29875",
+    "timestamp": "2023-03-05T11:30:00",
+    "content": "# Digital Fortress, Inc.\n**Invoice #DF-29875**\n\nDear Valued Customer,\n\nPlease find attached your latest invoice for Digital Fortress security services. Your payment is due within 7 days.\n\n**Invoice Summary:**\n- Service Plan: Enterprise Security Suite\n- Billing Period: March 1-31, 2023\n- Amount Due: $1,299.99\n\n**To view and pay your invoice:**\n1. Open the attached PDF file\n2. Enter your Digital Fortress account credentials when prompted\n3. Follow the payment instructions\n\n[**VIEW INVOICE.pdf**](https://billing.digital-fortress.example/invoice/DF-29875)\n\nIf you have any questions about this invoice, please contact our billing department at billing@digital-fortress.example.\n\nThank you for your business.\n\nRegards,\nAccounting Department\nDigital Fortress, Inc.\n\n---\n\n*This is an automated message. Please do not reply to this email.*"
+  },
+  {
+    "id": 1678119000000,
+    "from": "it-support@digital-fortress.example",
+    "subject": "Your Login Details",
+    "timestamp": "2023-03-06T08:30:00",
+    "content": "# Digital Fortress Network Access\n\nDear Team Member,\n\nAs requested, here are your secure network access credentials for the Digital Fortress office location. These credentials will provide you with access to our internal WiFi network.\n\n**WiFi Network Details:**\n\n```\nNetwork Name (SSID): DF_SECURE_NETWORK\nPassword: Fortress#9876!\n```\n\n**Important Security Guidelines:**\n\n1. Do not share these credentials with unauthorized personnel\n2. Use only for company-approved devices\n3. All network activity is monitored and logged\n4. Report any suspicious network activity immediately\n\nThis network provides access to our secure internal systems. Please ensure you are connected to our VPN when accessing sensitive company resources.\n\nIf you experience any connectivity issues or require additional assistance, please submit a ticket through the IT Support Portal or contact the help desk at extension 4357 (HELP).\n\nRegards,\n\nMarcus Chen\nIT Infrastructure Manager\nDigital Fortress, Inc.\n\n---\n\n*This information is confidential and intended only for authorized Digital Fortress personnel.*"
+  }
+]
