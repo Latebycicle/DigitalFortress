@@ -1,5 +1,12 @@
 [
   {
+    "id": 1678205400000,
+    "from": "projects@digital-fortress.example",
+    "subject": "P.V.T Station Access Code",
+    "timestamp": "2023-03-07T10:30:00",
+    "content": "# CONFIDENTIAL: P.V.T Station Project\n\nDear Team Member,\n\nAs requested, here is the code snippet for the P.V.T Station proximity sensor system. Please implement this in the Arduino controller as soon as possible.\n\n**IMPORTANT NOTICE:**\nHead to the P.V.T Station to retrieve the code you need.\n(⚠️: KEEP AN EYE ON THE DISTANCE)\n\n```cpp\nif (distance = 15) {\n   Serial.println(\"Color1: ------\");\n   setColor(//color1);\n} \n\nelse if (distance = 35) {\n   Serial.println(\"Color2: -----\");\n   setColor(//color2);\n} \n\nelse if (distance = 50) {\n   Serial.println(\"Color3: -----\");\n   setColor(//color3);\n} \n\nelse {\n   Serial.println(\"Color: Off\");\n   setColor(0, 0, 0);\n}\n```\n\nPlease note that the color values need to be determined based on the calibration of the specific sensor unit. The distance values (15, 35, 50) are in centimeters and should not be modified.\n\nLet me know if you have any questions about the implementation.\n\nRegards,\n\nDr. Sarah Chen\nR&D Director\nDigital Fortress, Inc.\n\n---\n\n*This information is classified and intended only for authorized project personnel.*"
+  },
+  {
     "id": 1677687600000,
     "from": "security@digitalfortress-verify.com",
     "subject": "URGENT: Your Digital Fortress Account Requires Verification",
@@ -37,8 +44,43 @@
   {
     "id": 1678119000000,
     "from": "it-support@digital-fortress.example",
-    "subject": "Your Login Details",
+    "subject": "Digital Fortress wifi login details",
     "timestamp": "2023-03-06T08:30:00",
-    "content": "# Digital Fortress Network Access\n\nDear Team Member,\n\nAs requested, here are your secure network access credentials for the Digital Fortress office location. These credentials will provide you with access to our internal WiFi network.\n\n**WiFi Network Details:**\n\n```\nNetwork Name (SSID): DF_SECURE_NETWORK\nPassword: Fortress#9876!\n```\n\n**Important Security Guidelines:**\n\n1. Do not share these credentials with unauthorized personnel\n2. Use only for company-approved devices\n3. All network activity is monitored and logged\n4. Report any suspicious network activity immediately\n\nThis network provides access to our secure internal systems. Please ensure you are connected to our VPN when accessing sensitive company resources.\n\nIf you experience any connectivity issues or require additional assistance, please submit a ticket through the IT Support Portal or contact the help desk at extension 4357 (HELP).\n\nRegards,\n\nMarcus Chen\nIT Infrastructure Manager\nDigital Fortress, Inc.\n\n---\n\n*This information is confidential and intended only for authorized Digital Fortress personnel.*"
+    "content": "# Digital Fortress Network Access\n\nDear Team Member,\n\nAs requested, here are your secure network access credentials for the Digital Fortress office location. These credentials will provide you with access to our internal WiFi network.\n\n**WiFi Network Details:**\n\n```\nNetwork Name (SSID): DigitalFortress\nPassword: DigitalFortress123\n```\n\n**Important Security Guidelines:**\n\n1. Do not share these credentials with unauthorized personnel\n2. Use only for company-approved devices\n3. All network activity is monitored and logged\n4. Report any suspicious network activity immediately\n\n As this network provides access to our secure internal systems, Broadcasting has been turned off. You will have to manually enter the SSID and Password to connect to the network.\n\nIf you experience any connectivity issues or require additional assistance, please submit a ticket through the IT Support Portal or contact the help desk (HELP).\n\nRegards,\n\nMarcus Chen\nIT Infrastructure Manager\nDigital Fortress, Inc.\n\n---\n\n*This information is confidential and intended only for authorized Digital Fortress personnel.*"
+  },
+  {
+    "id": 1678291800000,
+    "from": "amazon-orders@amazonshopping-secure.example",
+    "subject": "Your Amazon Order #A28937B Has Been Processed",
+    "timestamp": "2023-03-08T12:30:00",
+    "content": "# Amazon Order Confirmation\n\nDear Customer,\n\nThank you for your recent purchase on Amazon. Your order has been processed and is being prepared for shipment.\n\n**Order Details:**\n- Order Number: #A28937B\n- Date: March 8, 2023\n- Total Amount: $349.99\n\n**Shipping Address:**\nYour default shipping address\n\n**Payment Method:**\nEnding in ****4285\n\n**To view your order details or make changes, please click below:**\n\n[**VIEW ORDER DETAILS**](https://amazon-orders-secure.example/order/A28937B)\n\nIf you did not make this purchase, please contact our customer service immediately by clicking [here](https://amazon-security.example/report).\n\nThank you for shopping with Amazon!\n\nThe Amazon Team\n\n---\n\n*Note: This email was sent from a notification-only address that cannot accept incoming email. Please do not reply to this message.*"
+  },
+  {
+    "id": 1678378200000,
+    "from": "support@paypal-secure-notification.example",
+    "subject": "ALERT: Unusual Activity Detected on Your PayPal Account",
+    "timestamp": "2023-03-09T14:30:00",
+    "content": "# PayPal Security Alert\n\n![PayPal Logo](https://paypal-secure.example/logo.png)\n\nDear Valued Customer,\n\nWe have detected unusual activity on your PayPal account. For your protection, we have temporarily limited some features on your account.\n\n**Suspicious Activity Details:**\n- Date: March 9, 2023\n- Time: 08:42 AM EST\n- Location: Kiev, Ukraine\n- Device: Unknown Android Device\n\n**To restore full access to your account, please verify your information by clicking the link below:**\n\n[**SECURE ACCOUNT NOW**](https://paypal-secure-verification.example/verify)\n\nIf you do not verify your account within 24 hours, your account access will be further restricted.\n\nIf you did not attempt to log in from this location, please change your password immediately after verifying your account.\n\nThank you for your prompt attention to this matter.\n\nSincerely,\nPayPal Security Team\n\n---\n\n*This is an automated message. Please do not reply to this email.*"
+  },
+  {
+    "id": 1678464600000,
+    "from": "noreply@netflix-billing.example",
+    "subject": "Netflix Payment Declined - Action Required",
+    "timestamp": "2023-03-10T09:30:00",
+    "content": "# Netflix Payment Declined\n\n![Netflix Logo](https://netflix-secure.example/logo.png)\n\nDear Netflix Member,\n\nWe were unable to process your payment for your Netflix subscription. To avoid interruption of your service, please update your payment information as soon as possible.\n\n**Subscription Details:**\n- Plan: Premium 4K Ultra HD\n- Monthly Fee: $19.99\n- Next Billing Date: March 12, 2023\n\n**To update your payment information, please click the link below:**\n\n[**UPDATE PAYMENT METHOD**](https://netflix-account-billing.example/update)\n\nIf you do not update your payment information before your next billing date, your subscription will be canceled, and you will lose access to Netflix.\n\nIf you have any questions or need assistance, please visit our Help Center.\n\nThank you for being a valued Netflix member!\n\nThe Netflix Team\n\n---\n\n*This is an automated message. Please do not reply to this email.*"
+  },
+  {
+    "id": 1678551000000,
+    "from": "microsoft365@ms-office-renewal.example",
+    "subject": "Your Microsoft 365 Subscription Expires Tomorrow",
+    "timestamp": "2023-03-11T15:30:00",
+    "content": "# Microsoft 365 Subscription Expiration Notice\n\n![Microsoft Logo](https://microsoft-secure.example/logo.png)\n\nDear Microsoft 365 User,\n\nYour Microsoft 365 subscription is set to expire tomorrow. To ensure uninterrupted access to Word, Excel, PowerPoint, and other Microsoft services, please renew your subscription now.\n\n**Subscription Details:**\n- Product: Microsoft 365 Family\n- Status: Expiring\n- Expiration Date: March 12, 2023\n\n**To renew your subscription at a special discounted rate, click below:**\n\n[**RENEW SUBSCRIPTION NOW**](https://microsoft365-renewal.example/renew)\n\n**Special Offer:** Renew today and get 3 months free!\n\nDon't risk losing access to your important documents and files. Renew now to maintain all your Microsoft 365 benefits.\n\nThank you for choosing Microsoft 365.\n\nThe Microsoft Team\n\n---\n\n*This is an automated message. Please do not reply to this email.*"
+  },
+  {
+    "id": 1678637400000,
+    "from": "customerservice@apple-support-team.example",
+    "subject": "Your Apple ID Has Been Locked For Security Reasons",
+    "timestamp": "2023-03-12T11:30:00",
+    "content": "# Apple ID Security Alert\n\n![Apple Logo](https://apple-secure.example/logo.png)\n\nDear Apple Customer,\n\nYour Apple ID has been locked due to too many failed login attempts. This is a security measure to protect your account from unauthorized access.\n\n**To unlock your Apple ID, please verify your information by clicking the link below:**\n\n[**UNLOCK APPLE ID**](https://apple-id-unlock.example/verify)\n\nIf you do not verify your account within 24 hours, your Apple ID will remain locked, and you may lose access to:\n- iCloud services\n- App Store purchases\n- iTunes content\n- Apple device activation\n\nIf you did not attempt to log in multiple times, someone may be trying to access your account. After verification, we recommend changing your password immediately.\n\nThank you for your cooperation.\n\nApple Support Team\n\n---\n\n*This is an automated message. Please do not reply to this email.*"
   }
 ]
