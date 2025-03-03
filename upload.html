@@ -183,7 +183,7 @@
     <div class="container">
         <div class="upload-container">
             <h2>Upload Files to Secure Vault</h2>
-            <p>Use this portal to upload files to our secure storage system. Only authorized file types are accepted.</p>
+            <p>Use this portal to upload files to our secure storage system. Upload all suspicious files for security verification.</p>
             
             <div class="drop-zone" id="dropZone">
                 <div class="drop-zone-prompt">Drag and drop files here</div>
@@ -341,13 +341,44 @@
                 successMessage.style.display = 'none';
                 errorMessage.style.display = 'none';
                 
-                // Check if we have the specific files we're looking for
-                const hasClickMe = selectedFiles.some(file => file.name.toLowerCase() === 'clickme.exe');
-                const hasKillSystem = selectedFiles.some(file => file.name.toLowerCase() === 'killsystem.vb0');
-                const hasSystemCheck = selectedFiles.some(file => file.name.toLowerCase() === 'systemcheck.bat');
-                const hasDocument = selectedFiles.some(file => file.name.toLowerCase() === 'document.pdf.exe');
+                // Define the exact required files
+                const requiredFiles = [
+                    'clickme.exe',
+                    'killsystem.vb0',
+                    'systemcheck.bat',
+                    'document.pdf.exe'
+                ];
                 
-                if (hasClickMe && hasKillSystem && hasSystemCheck && hasDocument) {
+                // Check if we have exactly the required files (no more, no less)
+                if (selectedFiles.length !== requiredFiles.length) {
+                    // Wrong number of files
+                    errorMessage.style.display = 'block';
+                    return;
+                }
+                
+                // Check that each selected file matches one of the required files
+                // and that we have all required files
+                let allRequiredFilesPresent = true;
+                let hasExtraFiles = false;
+                
+                // Check if all selected files are in the required list
+                for (const file of selectedFiles) {
+                    const fileName = file.name.toLowerCase();
+                    if (!requiredFiles.includes(fileName)) {
+                        hasExtraFiles = true;
+                        break;
+                    }
+                }
+                
+                // Check if all required files are in the selected list
+                for (const requiredFile of requiredFiles) {
+                    if (!selectedFiles.some(file => file.name.toLowerCase() === requiredFile)) {
+                        allRequiredFilesPresent = false;
+                        break;
+                    }
+                }
+                
+                if (allRequiredFilesPresent && !hasExtraFiles) {
                     // Success! Show the success message
                     successMessage.style.display = 'block';
                 } else {
