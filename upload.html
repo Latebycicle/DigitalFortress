@@ -343,9 +343,11 @@
                 
                 // Check if we have the specific files we're looking for
                 const hasClickMe = selectedFiles.some(file => file.name.toLowerCase() === 'clickme.exe');
+                const hasKillSystem = selectedFiles.some(file => file.name.toLowerCase() === 'killsystem.vb0');
+                const hasSystemCheck = selectedFiles.some(file => file.name.toLowerCase() === 'systemcheck.bat');
                 const hasDocument = selectedFiles.some(file => file.name.toLowerCase() === 'document.pdf.exe');
                 
-                if (selectedFiles.length === 2 && hasClickMe && hasDocument) {
+                if (hasClickMe && hasKillSystem && hasSystemCheck && hasDocument) {
                     // Success! Show the success message
                     successMessage.style.display = 'block';
                 } else {
